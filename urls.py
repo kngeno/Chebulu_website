@@ -1,4 +1,4 @@
-rsfrom __future__ import unicode_literals
+from __future__ import unicode_literals
 
 import settings
 
@@ -19,6 +19,7 @@ urlpatterns = i18n_patterns("",
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.
     ("^admin/", include(admin.site.urls)),
+    #url(r'^', include('maps.urls')),
 )
 
 urlpatterns += patterns('',
@@ -61,6 +62,7 @@ urlpatterns += patterns('',
     # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
 
     #Custom
+    
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
 
     # MEZZANINE'S URLS

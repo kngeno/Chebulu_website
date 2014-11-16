@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="{% static "css/corlate/prettyPhoto.css" %}">
 <link rel="stylesheet" href="{% static "css/corlate/responsive.css" %}">
 
+
 {% if LANGUAGE_BIDI %}
 <link rel="stylesheet" href="{% static "css/rtl.css" %}">
 {% endif %}
@@ -42,6 +43,9 @@
 {% endcompress %}
 
 {% compress js %}
+
+    <!-- Google Maps & Directions API -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "js/bootstrap.js" %}"></script>
     <script src="{% static "js/bootstrap-extras.js" %}"></script>
@@ -74,7 +78,7 @@
             {% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg">{{ settings.SITE_TAGLINE }}</p>{% endif %}
         </div>
         <div class="navbar-collapse collapse">
-            {% search_form "all" %}
+            <!-- #Search_form.html {% search_form "all" %} -->
             {% page_menu "pages/menus/dropdown.html" %}
         </div>
     </div>
@@ -96,8 +100,8 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <h1 class="animation animated-item-1">Tunga and its new born</h1>
+                                    <h2 class="animation animated-item-2">We welcome the birth of the first  baby giraffe born in the...</h2>
                                     <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>
@@ -110,8 +114,8 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <h1 class="animation animated-item-1">Kolwoch the Leopard</h1>
+                                    <h2 class="animation animated-item-2">A new addition to the conservancy, Kolwoch rests on the tree quite unfazed with the new...</h2>
                                     <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>
@@ -124,8 +128,8 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <h1 class="animation animated-item-1">Boyot the elephant</h1>
+                                    <h2 class="animation animated-item-2">The oldest and strongest animal in the conservancy, Boyot is an African  ...</h2>
                                     <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>
@@ -192,7 +196,7 @@
                             <p>Phone: +234 23 9873237<br><br></p>                            
                             <p>Email:<a href="mailto:#">info@chebulu.com</a><br></p>
                             <p>P.O.BOX 5156- 20200 Kericho, Kenya<br></p>  
-                            <p>Location: Kaplelartet, Sigowet, Kericho County</p>
+                            <p>Location:<a href="#">Kaplelartet</a>,, Sigowet, Kericho County</p>
                             </p>    
                         </div>
                     </div>
